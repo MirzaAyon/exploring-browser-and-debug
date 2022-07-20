@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fetch</h1>
+
+
+    <script>
+        console.log(1111);
+        console.log(2222);
+
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+            .then(json => console.log(json))
+
+        // fetch tao asynchronus way te kaj kortese
+        //fetch er evabe pore data execute howake bole asynchronus call bole
+        //onk shomoe etake xml http request ba promise ei typer onk kichue bole 
+        //mane boshe thakbe na poroborti step e chole jabe 
+        //then and await same (async await er await mean krse)
+        console.log(3333);
+        console.log(4444);
+        for (let i = 0; i < 1000; i++) {
+            console.log(i);
+        }
+    </script>
+</body>
+
+</html>
