@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Location</h1>
+    <button onclick="refreshPage()">Refresh</button>
+    <button onclick="visitPH()">Visit PH</button>
+    <script>
+        const refreshPage = () => {
+            location.reload();
+        }
+        const visitPH = () => {
+            location.assign('https://web.programming-hero.com/');
+        }
+        //browser er location access kore onk kaj korte pari and onk value pete pari
+        //youtube e random ekta video te giye inpact e dibo location.search tahole ques mark er por search query ta chole ashbe
+        // browser er location name ekta jinish ache eta diye amra browser er url er bivinno part ke access korte pari
+        //ekta url er ? mark er porer part ta holo search query
+    </script>
+</body>
+
+</html>
