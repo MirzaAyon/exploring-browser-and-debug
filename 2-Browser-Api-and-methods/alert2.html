@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+
+<body>
+    <h1>ALert! ma is coming</h1>
+    <button onclick="maComing()">Ma coming</button>
+    <button onclick="askPicnic()">Going to Picnic</button>
+    <button onclick="askName()">Whats your name</button>
+    <script>
+        console.log('i am here'); //console e dekha jachee
+
+        // alert('ma is coming') //browser  e showing
+
+
+        const maComing = () => {
+            alert('Ammu is coming. Open the book');
+        } //button e click korle alter dibe
+
+        //boot er modal diye evabe elert dibe ota beshi bhalo
+
+
+        const askPicnic = () => {
+            //ekhane picnic ekta function jar kono pm nai
+            const response = confirm('Are you going to picnic?');
+            console.log(response);
+            if (response === true) {
+                alert('amake fee ta bKash kore de');
+            }
+            else {
+                console.log('DGM !!! Door e giya mor!!!');
+            }// ok hole alert diche and cancel hole inspact e DGM showing
+        }
+
+
+
+        const askName = () => {
+            prompt('What is your name?');
+            //evabe 2 way tei dewa jae
+
+            // const name = prompt('What is your name?');
+            // console.log(name);
+        }
+    </script>
+</body>
+
+</html>
