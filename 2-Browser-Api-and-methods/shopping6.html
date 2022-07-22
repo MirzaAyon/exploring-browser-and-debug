@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sopping</h1>
+    <input type="text" id="product-name"> <button onclick="addItem()">Add Item</button>
+    <br>
+    <ul id="products">
+
+    </ul>
+    <br>
+    <button onclick="placeOrder()">Place Order</button>
+    <script>
+        const addItem = () => {
+            const nameField = document.getElementById('product-name');
+            const name = nameField.value;
+            if (!name) {
+                return;
+            }
+
+            // display in the ui
+            displayProduct(name); //call korlam
+
+
+            // add to local storage
+            addProductToCart(name);
+
+            //clear
+            nameField.value = '';
+        }
+        const displayProduct = name => {
+            const ul = document.getElementById('products');
+            const li = document.createElement('li');
+            li.innerText = name;
+            ul.appendChild(li);
+        }
+        //ekhn empty kichu dile ta r local e add hbe na and ui te show hbe na 
+
+
+        const getCart = () => {
+            const cart = localStorage.getItem('cart');
+            let cartObj;
+            if (cart) {
+                cartObj = JSON.parse(cart);
+            }
+            else {
+                cartObj = {};
+            }
+            return cartObj;
+        }
+
+        const addProductToCart = name => {
+            const cart = getCart(); //get cart ke call korlam
+            cart[name] = 1;
+            const cartStringified = JSON.stringify(cart);
+            localStorage.setItem('cart', cartStringified); //prothom ta key porer ta value
+        }
+        //ekhn cart er modhe localstorage e laptop add hochee
+        //new  kore live server open kore application- local storage e geleo cart ke pabo
+    </script>
+
+</body>
+
+</html>
