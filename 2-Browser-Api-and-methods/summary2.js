@@ -15,4 +15,5 @@ true
 //new tab khular jnno - chorme://newtab
 
 //shift+esc dile ke ke memory khae ta jana jabe
-//chorme://restart dile shob tab resatrt hbe 
+//chorme://restart dile shob tab resatrt hbe
+//control+l and control+c dile url select and url copy
