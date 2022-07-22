@@ -20,6 +20,10 @@
 13.nextIdStringfied
 //tahole ekhn json ta show hbe 
 
+// ekhn set korar way dekhbo
+
+14.
+
 
 
 

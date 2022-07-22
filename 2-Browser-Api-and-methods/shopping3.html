@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sopping</h1>
+    <input type="text" id="product-name"> <button onclick="addItem()">Add Item</button>
+    <br>
+    <ul id="products">
+
+    </ul>
+    <br>
+    <button onclick="placeOrder()">Place Order</button>
+    <script>
+        const addItem = () => {
+            const nameField = document.getElementById('product-name');
+            const name = nameField.value;
+
+            // display in the ui
+            displayProduct(name); //call korlam
+
+
+            // add to local storage
+
+
+            //clear
+            nameField.value = '';
+        }
+        const displayProduct = name => {
+            const ul = document.getElementById('products');
+            const li = document.createElement('li');
+            li.innerText = name;
+            ul.appendChild(li);
+        }
+        //ekhn kichu likhe add korle ta add hochee
+        //but ami chai add korle ta local storage e set hoye thakbe je ami local storage e add korsi
+
+
+        const getCart = () => {
+            const cart = localStorage.getItem('cart');
+            let cartObj;
+            if (cart) {
+                cartObj = JSON.parse(cart);
+            }
+            else {
+                cartObj = {};
+            }
+            return cartObj;
+        }
+    </script>
+    <!-- ekhn console e giye getCart() dile ekta empty obj {} dibe-->
+
+    <!-- but application-local sto te giye cart name e kichu pelam na -->
+</body>
+
+</html>
